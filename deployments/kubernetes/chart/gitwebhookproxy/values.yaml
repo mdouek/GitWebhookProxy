@@ -41,10 +41,6 @@ gitWebhookProxy:
     runAsNonRoot: true
   ingress:
     enabled: false
-    annotations:
-      ingress.kubernetes.io/force-ssl-redirect: "true"
-      kubernetes.io/ingress.class: external-ingress
-      monitor.stakater.com/enabled: "true"
     host: gitwebhookproxy.tools.stackator.com
     tlsSecretName: ""
     serviceName: gitwebhookproxy
