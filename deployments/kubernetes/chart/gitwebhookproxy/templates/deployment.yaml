@@ -28,6 +28,10 @@ spec:
       labels:
 {{ include "gitwebhookproxy.labels.selector" . | indent 8 }}
     spec:
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
       {{- with .Values.gitWebhookProxy.podSecurityContext }}
       securityContext: {{ . | toYaml | nindent 8 }}
       {{- end }}
