@@ -45,3 +45,4 @@ gitWebhookProxy:
     tlsSecretName: ""
     serviceName: gitwebhookproxy
     servicePort: 80
+nodeSelector: {}
