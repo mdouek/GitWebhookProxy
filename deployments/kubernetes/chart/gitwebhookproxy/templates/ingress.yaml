@@ -30,7 +30,7 @@ spec:
           service:
             name: {{ template "gitwebhookproxy.name" . }}
             port:
-              number: {{ .Values.gitWebhookProxy.servicePort }}
+              number: {{ .Values.gitWebhookProxy.ingress.servicePort }}
   tls:
   - hosts:
     - {{ .Values.gitWebhookProxy.ingress.host }}
